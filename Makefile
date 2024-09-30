@@ -6,7 +6,7 @@
 #    By: fzayani <fzayani@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/17 15:59:15 by fzayani           #+#    #+#              #
-#    Updated: 2024/09/30 13:55:23 by fzayani          ###   ########.fr        #
+#    Updated: 2024/09/30 16:19:07 by fzayani          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		= philo
 CC			= cc
 CFLAGS		= -Wall -Werror -Wextra #-fsanitize=address
 RM			= rm -rf
-INCS		= -I ./includes/
+INCS		= -I ./includes/ 
 
 SRC_FILES	= main.c create_philo.c utils.c one_philo.c\
 			take.c init.c check_args.c
