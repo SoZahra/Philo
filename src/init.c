@@ -6,7 +6,7 @@
 /*   By: fzayani <fzayani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:32:08 by fzayani           #+#    #+#             */
-/*   Updated: 2024/09/30 11:44:26 by fzayani          ###   ########.fr       */
+/*   Updated: 2024/09/30 16:56:43 by fzayani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ void	init_philo(t_table *table)
 	}
 }
 
-void init_table(t_table *table)
+void	init_table(t_table *table)
 {
-	pthread_mutex_init(&table->death_mutex, NULL);
-	int i;
+	int	i;
 
+	pthread_mutex_init(&table->death_mutex, NULL);
 	i = 0;
-	while(i < table->num_philo)
+	while (i < table->num_philo)
 		i++;
 	table->is_dead = 0;
 	table->start_time = get_current_time();
@@ -54,9 +54,9 @@ void	init_forks(t_table *table)
 	}
 }
 
-void init_simu(t_table *table)
+void	init_simu(t_table *table)
 {
 	init_table(table);
-    init_forks(table);
-    init_philo(table);
+	init_forks(table);
+	init_philo(table);
 }

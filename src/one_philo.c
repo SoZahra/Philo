@@ -6,11 +6,23 @@
 /*   By: fzayani <fzayani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:22:17 by fzayani           #+#    #+#             */
-/*   Updated: 2024/09/30 14:33:42 by fzayani          ###   ########.fr       */
+/*   Updated: 2024/09/30 16:59:33 by fzayani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/philo.h"
+
+void	start_one(t_table *table)
+{
+	if (table->num_philo == 1)
+	{
+		pthread_create(&table->philo[0].thread, NULL, philo_lifecycle_one,
+			&table->philo[0]);
+		table->can_start = 1;
+		pthread_join(table->philo[0].thread, NULL);
+		return ;
+	}
+}
 
 void	*philo_lifecycle_one(void *arg)
 {
