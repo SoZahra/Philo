@@ -6,13 +6,13 @@
 /*   By: fzayani <fzayani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:33:41 by fzayani           #+#    #+#             */
-/*   Updated: 2024/09/30 17:55:51 by fzayani          ###   ########.fr       */
+/*   Updated: 2024/10/02 14:26:58 by fzayani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/philo.h"
 
-void	wait_to_start(t_philo *philo)
+void	wait_to_start(t_philo *philo) 
 {
 	pthread_mutex_lock(&philo->table->start_mutex);
 	while (!philo->table->can_start)
